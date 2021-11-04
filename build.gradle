@@ -22,3 +22,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// application could not be installed debug
+task cleanOutputDir(type: Delete) {
+    delete fileTree(dir: "build/outputs/apk/debug/")
+}
