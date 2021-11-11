@@ -17,35 +17,36 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
             <TextView
-                    android:text="What are soba noodles made of?"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="276dp" android:id="@+id/question1" android:textSize="30sp"
+                    android:layout_height="276dp" android:id="@+id/question" android:textSize="30sp"
                     android:textAlignment="center" android:baselineAligned="false"/>
             <ProgressBar
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:id="@+id/q1ProgressBar"/>
+                    android:id="@+id/ProgressBar"
+                    android:progress="0"/>
             <RadioButton
-                    android:text="Buckwheat"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/q1CorrectAnswer"/>
+                    android:layout_height="wrap_content" android:id="@+id/answer1"/>
             <RadioButton
-                    android:text="Rye"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/q1WrongAnswer1"/>
+                    android:layout_height="wrap_content" android:id="@+id/answer2"/>
             <RadioButton
-                    android:text="Sorghum"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/a1WrongAnswer2"/>
+                    android:layout_height="wrap_content" android:id="@+id/answer3"/>
             <RadioButton
-                    android:text="Wheat"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/q1WrongAnswer3"/>
+                    android:layout_height="wrap_content" android:id="@+id/answer4"/>
             <RadioButton
-                    android:text="Corn"
+                    android:text=""
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/q1WrongAnswer4"/>
+                    android:layout_height="wrap_content" android:id="@+id/answer5"/>
             <Button
                     android:text="Submit"
                     android:layout_width="match_parent"
