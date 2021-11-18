@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".quizQuestionsActivity">
+        tools:context=".QuizQuestionActivity">
 
     <ScrollView
             android:layout_width="match_parent"
@@ -27,30 +27,34 @@
                     android:layout_height="60dp"
                     android:id="@+id/ProgressBar"
                     android:progress="0"/>
-            <RadioButton
-                    android:text=""
+            <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/answer1"/>
-            <RadioButton
-                    android:text=""
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/answer2"/>
-            <RadioButton
-                    android:text=""
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/answer3"/>
-            <RadioButton
-                    android:text=""
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/answer4"/>
-            <RadioButton
-                    android:text=""
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/answer5"/>
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answers">
+                <RadioButton
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/answer1"/>
+                <RadioButton
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/answer2"/>
+                <RadioButton
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/answer3"/>
+                <RadioButton
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/answer4"/>
+            </RadioGroup>
+
+
             <Button
                     android:text="Submit"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/a1SubmitButton"/>
+                    android:layout_height="wrap_content" android:id="@+id/SubmitButton"
+                    android:onClick="submitQuestion"/>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

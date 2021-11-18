@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:paddingLeft="16dp"
@@ -14,33 +15,40 @@
             android:paddingBottom="100dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_gravity="center_horizontal"/>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="20dp">
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center_horizontal" app:cardBackgroundColor="#BC4C4C">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp">
 
-        <TextView
-                android:text="What's your name?"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/textView"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:layout_gravity="center_horizontal"/>
-        <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:ems="10"
-                android:id="@+id/editTextTextPersonName"/>
-        <Button
-                android:text="Start"
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/button"
-                android:layout_gravity="center_horizontal"
-                android:onClick="startQuiz"/>
-    </LinearLayout>
+            <TextView
+                    android:text="What's your name?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:id="@+id/textView"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_gravity="center_horizontal"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:ems="10"
+                    android:id="@+id/editTextTextPersonName"/>
+            <Button
+                    android:text="Start"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/button"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="startQuiz"
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

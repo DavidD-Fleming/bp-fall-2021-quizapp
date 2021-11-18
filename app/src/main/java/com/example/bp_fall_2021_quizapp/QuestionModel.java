@@ -2,7 +2,8 @@ package com.example.bp_fall_2021_quizapp;
 
 public class QuestionModel {
 
-    private String question, opt1, opt2, opt3, opt4;
+    private String question;
+    private String[] options;
     private int correctAnsNum;
 
     /**
@@ -16,10 +17,7 @@ public class QuestionModel {
      */
     public QuestionModel(String question, String opt1, String opt2, String opt3, String opt4, int correctAnsNum) {
         this.question = question;
-        this.opt1 = opt1;
-        this.opt2 = opt2;
-        this.opt3 = opt3;
-        this.opt4 = opt4;
+        this.options = new String[] {opt1, opt2, opt3, opt4};
         this.correctAnsNum = correctAnsNum;
     }
 
@@ -31,21 +29,7 @@ public class QuestionModel {
         return question;
     }
 
-    public String getOpt1() {
-        return opt1;
-    }
-
-    public String getOpt2() {
-        return opt2;
-    }
-
-    public String getOpt3() {
-        return opt3;
-    }
-
-    public String getOpt4() {
-        return opt4;
-    }
+    public String[] getOptions() {return options;}
 
     // button indexes go 0, 1, 2, 3... so we must subtract one here
     public int getCorrectAnsNum() {
