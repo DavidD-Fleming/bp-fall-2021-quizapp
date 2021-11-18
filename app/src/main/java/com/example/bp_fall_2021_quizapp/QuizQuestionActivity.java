@@ -110,6 +110,8 @@ public class QuizQuestionActivity extends AppCompatActivity {
             questionsCompleted++;
         } else {
             Intent intent = new Intent(this, ResultActivity.class);
+            intent.putExtra("score", score);
+            intent.putExtra("username", name);
             startActivity(intent);
             finish(); // close current activity
 
