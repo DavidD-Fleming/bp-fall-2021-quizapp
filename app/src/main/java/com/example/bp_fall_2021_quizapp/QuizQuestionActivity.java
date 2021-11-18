@@ -32,7 +32,8 @@ public class QuizQuestionActivity extends AppCompatActivity {
         // create arraylist of questions
         questions = new ArrayList<QuestionModel>();
         // get username intent from main activity screen
-
+        Bundle bundle = getIntent().getExtras();
+        String name = bundle.getString("username");
         // initialize views using findViewByID
          answers = new RadioButton[4];
          answers[0] = findViewById(R.id.answer1);

@@ -17,6 +17,9 @@ public class ResultActivity extends AppCompatActivity {
         // initialize UI components
 
         // set username and score
+        Bundle bundle = getIntent().getExtras();
+        String name = bundle.getString("username");
+        String score = bundle.getString("scoreusername");
     }
 
     /**
