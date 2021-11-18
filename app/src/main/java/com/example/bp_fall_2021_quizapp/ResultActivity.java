@@ -19,7 +19,7 @@ public class ResultActivity extends AppCompatActivity {
         // set username and score
         Bundle bundle = getIntent().getExtras();
         String name = bundle.getString("username");
-        String score = bundle.getString("scoreusername");
+        String score = bundle.getString("score");
     }
 
     /**
