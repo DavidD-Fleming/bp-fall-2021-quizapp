@@ -101,7 +101,7 @@ public class QuizQuestionActivity extends AppCompatActivity {
             // set the question & text to the next question
             // increase question number
             // set progress bar
-        if (questionsCompleted != questions.size()) {
+        if (questionsCompleted+1 != questions.size()) {
             String[] options = questions.get(questionsCompleted).getOptions();
             for (int i = 0; i < options.length; i++) {
                 answers[i].setText(options[i]);
@@ -109,7 +109,9 @@ public class QuizQuestionActivity extends AppCompatActivity {
             question.setText(questions.get(questionsCompleted).getQuestion());
             questionsCompleted++;
         } else {
-            // if finished with quiz, start Results activity
+            Intent intent = new Intent(this, ResultActivity.class);
+            startActivity(intent);
+            finish(); // close current activity
 
         }
 
@@ -126,8 +128,8 @@ public class QuizQuestionActivity extends AppCompatActivity {
         QuestionModel QuestionObject = questions.get(questionsCompleted);
         if (answer == QuestionObject.getOptions()[QuestionObject.getCorrectAnsNum()]) {
             score++;
-            double progress = questionsCompleted / questions.size() * 100;
-            progressBar.setProgress((int) progress);
         }
+        double progress = questionsCompleted / questions.size() * 100;
+        progressBar.setProgress((int) progress);
     }
 }
