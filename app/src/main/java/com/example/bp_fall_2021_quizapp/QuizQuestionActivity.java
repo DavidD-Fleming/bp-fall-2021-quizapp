@@ -74,16 +74,30 @@ public class QuizQuestionActivity extends AppCompatActivity {
      */
     public void submitQuestion(View view){
         // if no options have been selected, prompt user to select an answer
-
         // use helper methods to check the answer and show the next question
+        RadioButton[] answerButtons = new RadioButton[]{answer1, answer2, answer3, answer4, answer5};
+        boolean optionIsSelected = false;
 
+        // check through all radio buttons to make sure at least one is checked, the number of checked button is held
+        for(int i = 0; i < answerButtons.length; i++) {
+            if (answerButtons[i].isChecked()) {
+                optionIsSelected = true;
+            }
+        }
+
+        // make sure an option is selected. if there is a selected option, check its answer and move onto next question
+        if (optionIsSelected) {
+            checkAnswer();
+            showNextQuestion();
+        } else {
+            Toast.makeText(getBaseContext(), "Please choose an answer!", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
      * Display next question. If finished, move onto results screen
      */
     private void showNextQuestion(){
-
         // clear previous button selections
 
         // if you haven't gone through all the questions yet
